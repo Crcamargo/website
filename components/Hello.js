@@ -15,6 +15,7 @@ const Main = styled.div`
   align-items: center;
   @media (max-width: ${MOBILE}) {
     justify-content: space-between;
+    margin-bottom: 4rem;
   }
 `;
 const HelloContainer = styled.div`
