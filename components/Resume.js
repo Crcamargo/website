@@ -3,6 +3,7 @@ import ResumeSectionContent from "../components/ResumeSectionContent";
 import UCSD from "../public/ucsd.png";
 import styled from "styled-components";
 import Anchor from "./Anchor";
+import { MOBILE } from "./Constants";
 
 const ListElement = styled.li`
   margin-bottom: 1rem;
@@ -11,7 +12,10 @@ const ListElement = styled.li`
 const ResumeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 4em 0 4em;
+  margin: 0 4rem 0 4rem;
+  @media (max-width: ${MOBILE}) {
+    margin: 0 1rem 0 1rem;
+  }
 `;
 
 const Resume = () => (

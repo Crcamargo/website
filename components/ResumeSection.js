@@ -1,10 +1,14 @@
 import styled from "styled-components";
+import { MOBILE } from "./Constants";
 
 const SectionContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
+  @media (max-width: ${MOBILE}) {
+    flex-direction: column;
+  }
 `;
 const SectionName = styled.div`
   flex-grow: 1;
@@ -20,6 +24,9 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 1rem;
+  @media (max-width: ${MOBILE}) {
+    width: 100%;
+  }
 `
 
 const ResumeSection = ({ name, children }) => (
