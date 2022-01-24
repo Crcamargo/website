@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { useState } from "react";
 import Footer from "../components/Footer";
 import Hello from "../components/Hello";
+import LightDarkToggle from "../components/LightDarkToggle";
 
 const lightTheme = {
   color: "black",
@@ -23,7 +24,7 @@ const Container = styled.div`
 `;
 
 export default function Home() {
-  const [theme, setTheme] = useState(darkTheme);
+  const [theme, setTheme] = useState(lightTheme);
   const setDarkTheme = () => setTheme(darkTheme);
   const setLightTheme = () => setTheme(lightTheme);
 
@@ -38,8 +39,7 @@ export default function Home() {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <button onClick={setDarkTheme}>Toggle Dark</button>
-        <button onClick={setLightTheme}>Toggle Light</button>
+        <LightDarkToggle toggleDark={setDarkTheme} toggleLight={setLightTheme} />
         <Hello />
         <Resume />
         <Footer />

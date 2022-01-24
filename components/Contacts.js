@@ -1,14 +1,24 @@
 import styled from "styled-components";
 import { GitHub, Linkedin, Mail } from "react-feather";
+import { MOBILE } from "./Constants";
 
 const ICON_SIZE = 30;
 const ContactsContainer = styled.div`
   margin-top: 4rem;
   margin-left: 2rem;
+  @media (max-width: ${MOBILE}) {
+    margin: 2rem 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 `;
 const MailIcon = styled(Mail)`
   color: ${(props) => props.theme.color};
   margin-right: 2rem;
+  @media (max-width: ${MOBILE}) {
+    margin: 0;
+  }
   &:hover {
     color: ${(props) => props.theme.accentColor};
     cursor: pointer;
@@ -17,6 +27,9 @@ const MailIcon = styled(Mail)`
 const LinkedinIcon = styled(Linkedin)`
   color: ${(props) => props.theme.color};
   margin-right: 2rem;
+  @media (max-width: ${MOBILE}) {
+    margin: 0;
+  }
   &:hover {
     color: ${(props) => props.theme.accentColor};
     cursor: pointer;
@@ -25,6 +38,9 @@ const LinkedinIcon = styled(Linkedin)`
 const GithubIcon = styled(GitHub)`
   color: ${(props) => props.theme.color};
   margin-right: 2rem;
+  @media (max-width: ${MOBILE}) {
+    margin: 0;
+  }
   &:hover {
     color: ${(props) => props.theme.accentColor};
     cursor: pointer;

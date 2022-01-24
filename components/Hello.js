@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styled from "styled-components";
-import Me from "../public/photo-small.jpg";
+import Me from "../public/shaka.jpg";
 import Contacts from "./Contacts";
 import { MOBILE } from "./Constants";
 
@@ -13,6 +13,9 @@ const Main = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: ${MOBILE}) {
+    justify-content: space-between;
+  }
 `;
 const HelloContainer = styled.div`
   display: flex;
@@ -38,7 +41,7 @@ const Description = styled.div`
   margin-left: 3rem;
   max-width: 600px;
   @media (max-width: ${MOBILE}) {
-    margin: 0;
+    margin: 2rem 0 0 0;
     text-align: center;
   }
 `;
