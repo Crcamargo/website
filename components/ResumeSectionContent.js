@@ -15,7 +15,7 @@ const ContentTitle = styled.div`
   margin-right: 2rem;
 `;
 const ContentDate = styled.div`
-  color: darkgrey;
+  font-weight: 200;
   font-size: 1rem;
 `;
 const ContentImg = styled(Image)``;

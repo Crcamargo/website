@@ -49,17 +49,28 @@ const GithubIcon = styled(GitHub)`
 
 const Contacts = () => (
   <ContactsContainer>
-    <a target="_blank" rel="noreferrer" href="mailto:cristian.dean22@gmail.com">
+    <a
+      target="_blank"
+      rel="noreferrer"
+      href="mailto:cristian.dean22@gmail.com"
+      aria-label="email"
+    >
       <MailIcon size={ICON_SIZE} />
     </a>
     <a
       target="_blank"
       rel="noreferrer"
       href="https://www.linkedin.com/in/crcamargo"
+      aria-label="linkedin"
     >
       <LinkedinIcon size={ICON_SIZE} />
     </a>
-    <a target="_blank" rel="noreferrer" href="https://github.com/Crcamargo">
+    <a
+      target="_blank"
+      rel="noreferrer"
+      href="https://github.com/Crcamargo"
+      aria-label="github"
+    >
       <GithubIcon size={ICON_SIZE} />
     </a>
   </ContactsContainer>
