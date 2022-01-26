@@ -52,7 +52,7 @@ const Contacts = () => (
     <a
       target="_blank"
       rel="noreferrer"
-      href="mailto:cristian.dean22@gmail.com"
+      href="mailto:crcamargo@protonmail.com"
       aria-label="email"
     >
       <MailIcon size={ICON_SIZE} />
