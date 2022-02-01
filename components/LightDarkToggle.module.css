@@ -1,0 +1,16 @@
+.container {
+    padding-right: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon {
+    color: var(--color);
+    margin-right: 1rem;
+}
+
+.icon:hover{
+    color: var(--accent-color);
+    cursor: pointer;
+}

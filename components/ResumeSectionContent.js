@@ -1,42 +1,7 @@
-import styled from "styled-components";
+import styles from "./ResumeSectionContent.module.css";
 import Image from "next/image";
 
 const LOGO_SIZE = 75;
-const SectionContent = styled.div`
-  margin-bottom: 4rem;
-`;
-const ContentHeader = styled.div`
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-`;
-const ContentTitleContainer = styled.div``;
-const ContentTitle = styled.div`
-  margin-right: 2rem;
-`;
-const ContentDate = styled.div`
-  font-weight: 200;
-  font-size: 1rem;
-`;
-const ContentImg = styled(Image)``;
-const Content = styled.div``;
-const Skills = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 1rem;
-`;
-const Skill = styled.div`
-  padding: 0.5rem;
-  border-radius: 10px;
-  border: 1px solid ${props => props.theme.accentColor};
-  color: ${props => props.theme.accentColor};
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  font-size: 0.8rem;
-`;
-
 const ResumeSectionContent = ({
   title,
   title2,
@@ -46,10 +11,10 @@ const ResumeSectionContent = ({
   skills,
   imgWidth,
 }) => (
-  <SectionContent>
-    <ContentHeader>
-      <ContentTitleContainer>
-        <ContentTitle>
+  <div className={styles.content}>
+    <div className={styles.header}>
+      <div>
+        <div className={styles.title}>
           {title}
           {title2 ? (
             <span>
@@ -57,28 +22,31 @@ const ResumeSectionContent = ({
               {title2}
             </span>
           ) : null}
-        </ContentTitle>
-        <ContentDate>{date}</ContentDate>
-      </ContentTitleContainer>
+        </div>
+        <div className={styles.date}>{date}</div>
+      </div>
       {img ? (
-        <ContentImg
+        <Image
+          alt="section image"
           src={img}
           width={imgWidth ? imgWidth : LOGO_SIZE}
           height={LOGO_SIZE}
         />
       ) : null}
-    </ContentHeader>
-    <Content>
+    </div>
+    <div>
       {children}
       {skills ? (
-        <Skills>
+        <div className={styles.skills}>
           {skills.map((skill, i) => (
-            <Skill key={i}>{skill}</Skill>
+            <div className={styles.skill} key={i}>
+              {skill}
+            </div>
           ))}
-        </Skills>
+        </div>
       ) : null}
-    </Content>
-  </SectionContent>
+    </div>
+  </div>
 );
 
 export default ResumeSectionContent;

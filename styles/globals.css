@@ -9,3 +9,12 @@ body {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  /* Default light theme */
+  --color: #000000;
+  --background-color: #fafafa;
+  --accent-color: #0070f3;
+
+  --mobile: 700px;
+}

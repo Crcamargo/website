@@ -1,13 +1,9 @@
-import styled from "styled-components";
-
-const A = styled.a`
-  color: ${(props) => props.theme.accentColor};
-`;
+import styles from "./Anchor.module.css"
 
 const Anchor = ({ href, children }) => (
-  <A href={href} target="_blank" rel="noreferrer">
+  <a href={href} target="_blank" rel="noreferrer" className={styles.anchor}>
     {children}
-  </A>
+  </a>
 );
 
 export default Anchor;
