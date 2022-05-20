@@ -6,17 +6,6 @@ import Hello from "../components/Hello";
 import LightDarkToggle from "../components/LightDarkToggle";
 
 export default function Home() {
-  const setDarkTheme = () => {
-    document.documentElement.style.setProperty("--color", "#fafafa");
-    document.documentElement.style.setProperty("--background-color", "#0d1117");
-    document.documentElement.style.setProperty("--accent-color", "#58a6ff");
-  };
-  const setLightTheme = () => {
-    document.documentElement.style.setProperty("--color", "#000000");
-    document.documentElement.style.setProperty("--background-color", "#fafafa");
-    document.documentElement.style.setProperty("--accent-color", "#0070f3");
-  };
-
   return (
     <div className={styles.container}>
       <Head>
@@ -27,7 +16,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <LightDarkToggle toggleDark={setDarkTheme} toggleLight={setLightTheme} />
+      <LightDarkToggle />
       <Hello />
       <Resume />
       <Footer />

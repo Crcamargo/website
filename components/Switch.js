@@ -1,12 +1,13 @@
 import styles from "./Switch.module.css";
 
-const Switch = ({ off, on }) => (
+const Switch = ({ checked, toggleOn, toggleOff }) => (
   <div className={styles.wrapper}>
     <input
       className={styles.checkbox}
       id="checkbox"
       type="checkbox"
-      onChange={(e) => (e.target.checked ? on() : off())}
+      onChange={(e) => (e.target.checked ? toggleOn() : toggleOff())}
+      checked={checked}
     />
     <label className={styles.label} htmlFor="checkbox" />
   </div>

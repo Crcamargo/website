@@ -12,9 +12,14 @@ body {
 
 :root {
   /* Default light theme */
-  --color: #000000;
+  /* --color: #000000;
   --background-color: #fafafa;
-  --accent-color: #0070f3;
+  --accent-color: #0070f3; */
+
+  /* Default dark theme */
+  --color: #fafafa;
+  --background-color: #0d1117;
+  --accent-color: #58a6ff;
 
   --mobile: 700px;
 }

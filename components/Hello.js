@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Hello.module.css";
-import Me from "../public/shaka.jpg";
+import Me from "../public/linkedin.jpeg";
 import Contacts from "./Contacts";
 
 const IMAGE_SIZE = 200;
