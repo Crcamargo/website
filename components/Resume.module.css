@@ -8,6 +8,11 @@
   margin-bottom: 1rem;
 }
 
+.teamTitle {
+  font-size: 1.25rem;
+  color: #5C5F66;
+}
+
 @media (max-width: 700px) {
   .container {
     margin: 0 1rem 0 1rem;
