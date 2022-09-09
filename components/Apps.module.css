@@ -1,0 +1,45 @@
+.container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.apps {
+  min-width: 400px;
+  max-width: 900px;
+  width: 75vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  height: 300px;
+  position: relative;
+  width: 290px;
+  overflow: hidden;
+  color: black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card:hover {
+  /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+  cursor: pointer;
+}
+
+.appImage {
+  height: 220px;
+  width: 100%;
+}
+
+.appName {
+  height: 80px;
+  width: 100%;
+  padding-left: 20px;
+}

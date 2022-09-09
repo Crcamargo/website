@@ -1,7 +1,9 @@
-import { Sun, Moon } from "react-feather";
+import { Sun, Moon, Grid, Home } from "react-feather";
 import styles from "./LightDarkToggle.module.css";
 import Switch from "./Switch";
 import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const LightDarkToggle = () => {
   const [checked, setChecked] = useState(true);
@@ -18,8 +20,21 @@ const LightDarkToggle = () => {
     setChecked(false);
   };
 
+  const router = useRouter();
+  const isAppPage = router.pathname.toLowerCase() === "/apps";
+
+  const buttonLink =  isAppPage ? "/" : "/apps"
+  const buttonText =  isAppPage ? "Home" : "Applications"
+  const buttonIcon = isAppPage ? <Home /> : <Grid />
+
   return (
     <div className={styles.container}>
+      <Link href={buttonLink} passHref>
+        <div className={styles.appIconContainer}>
+          {buttonIcon}
+          <span className={styles.appText}>{buttonText}</span>
+        </div>
+      </Link>
       <Sun className={styles.icon} />
       <Switch
         checked={checked}
