@@ -16,8 +16,9 @@ const Resume = () => (
     </ResumeSection>
     <ResumeSection name="Experience">
       <ResumeSectionContent
-        title="AI/ML Software Engineer - Seismic"
-        date="September 2018 - Present"
+        title="Software Engineer - Seismic"
+        date="September 2018 - September 2022"
+        includeLeftIndent={true}
         skills={[
           ".NET",
           "Python",
@@ -28,34 +29,59 @@ const Resume = () => (
           "GCP",
           "AWS",
           "PostgreSQL",
+          "Redis",
+          "Kafka",
           "AI/ML",
         ]}
       >
+        <br />
+        <div className={styles.teamTitle}>External Data Team</div>
         <ul>
+          <li>
+            Helped build the next external data attribution infrastructure,
+            which turned a batch job into an event-driven microservice-based
+            system. Improved attribution time from 24 hours to near-real-time.
+          </li>
+        </ul>
+        <div className={styles.teamTitle}>AI/ML Team</div>
+        <ul>
+          <li>
+            Built Seismic&apos;s ML training infrastructure in Python and
+            AzureML and was responsible for the backend services that support{" "}
+            <Anchor href="https://seismic.com/company/blog/summer-2021-release-ai-guided-sales/">
+              Seismic Aura - Seismic&apos;s AI Engine
+            </Anchor>
+          </li>
+          <li>
+            Helped rebuild Seismic&apos;s homepage content recommendation system
+            using .NET and Redis. This service was 20x faster than the old one
+            and drastically improved homepage loading times.
+          </li>
+          <li>
+            Created Seismic&apos;s internal A/B testing experiment framework in
+            .NET using PostgreSQL and managed Seismic&apos;s first production
+            homepage A/B testing.
+          </li>
+          <li>
+            Productionized data scientists&apos; work by: refactoring Python
+            code into deployable packages; integrating existing Kubernetes
+            hosted docker containers into fully automated CI/CD Jenkins
+            pipelines; and establishing security, logging, and alerting best
+            practices in the AI/ML teams microservices.
+          </li>
           <li>
             Worked with the Data and Analytics Team to develop streaming and
             batch processing data systems in .NET that wrote data to MSSQL and
             Snowflake Data Warehouse to make data available for machine learning
             and analytics.
           </li>
+        </ul>
+        <div className={styles.teamTitle}>CRM Services Team</div>
+        <ul>
           <li>
-            Productionized data scientists’ work by: refactoring Python code
-            into deployable packages; integrating existing Kubernetes hosted
-            docker containers into fully automated CI/CD Jenkins pipelines; and
-            establishing security, logging, and alerting best practices in the
-            AI/ML teams microservices.
-          </li>
-          <li>
-            Created Seismic’s internal A/B testing experiment framework using
-            .NET REST APIs and PostgreSQL, and was responsible for Seismic’s
-            first production homepage A/B testing.
-          </li>
-          <li>
-            Built Seismic&apos;s ML training infrastructure and was responsible
-            for the backend services that supports{" "}
-            <Anchor href="https://seismic.com/company/blog/summer-2021-release-ai-guided-sales/">
-              Seismic Aura - Seismic&apos;s AI Engine
-            </Anchor>
+            Worked on the CRM Services team to refactor Seismic&apos;s legacy
+            and monolithic, Predictive Content application into a microservice
+            that was 10x faster than the original.
           </li>
         </ul>
       </ResumeSectionContent>
@@ -103,7 +129,25 @@ const Resume = () => (
       </ResumeSectionContent>
     </ResumeSection>
     <ResumeSection name="Projects">
-      <ResumeSectionContent title={"Smart Park Disney"}>
+      <ResumeSectionContent
+        title={"Personal Website"}
+        skills={["Next.js", "Javascript", "Vercel"]}
+      >
+        <div>
+          <Anchor href="https://cristiancamargo.me/">This Website!</Anchor>
+          <ul>
+            <li>
+              Built a web application using Next.js React Framework to showcase
+              personal goals and projects.
+            </li>
+            <li>Deployed and hosted using Vercel.</li>
+          </ul>
+        </div>
+      </ResumeSectionContent>
+      <ResumeSectionContent
+        title={"Smart Park Disney"}
+        skills={["Java", "Android Studio", "Firebase", "Heroku"]}
+      >
         <div>
           <Anchor href="https://github.com/Crcamargo/SmartParkDisney/blob/master/app/src/main/java/com/themparksdetermined/smartparkdisney/View/SmartPlanFragment.java">
             Github
@@ -122,7 +166,7 @@ const Resume = () => (
           </ul>
         </div>
       </ResumeSectionContent>
-      <ResumeSectionContent title={"VRcane"}>
+      <ResumeSectionContent title={"VRcane"} skills={["Unity", "C#"]}>
         <div>
           <Anchor href="https://youtu.be/1d2FRqKNIU0">Project Demo</Anchor>
           <ul>
@@ -134,21 +178,6 @@ const Resume = () => (
               Worked in a team as algorithm specialist to design functions and
               optimize algorithms to have VRcane running properly and
               efficiently.
-            </li>
-          </ul>
-        </div>
-      </ResumeSectionContent>
-      <ResumeSectionContent title={"Treacherous Adventure"}>
-        <div>
-          <Anchor href="https://treacherous-adventure.web.app/">
-            https://treacherous-adventure.web.app/
-          </Anchor>
-          <ul>
-            <li>
-              Built and launched the official Treacherouse Adventure website!
-            </li>
-            <li>
-              Used HTML, CSS, Javascript, and Bootstrap front-end framework.
             </li>
           </ul>
         </div>
