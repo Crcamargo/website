@@ -16,6 +16,10 @@ const Resume = () => (
     </ResumeSection>
     <ResumeSection name="Experience">
       <ResumeSectionContent
+        title="Senior Software Engineer - Machine Learning - Wise"
+        date="January 2023 - Present"
+      ></ResumeSectionContent>
+      <ResumeSectionContent
         title="Software Engineer - Seismic"
         date="September 2018 - September 2022"
         includeLeftIndent={true}
@@ -129,6 +133,22 @@ const Resume = () => (
       </ResumeSectionContent>
     </ResumeSection>
     <ResumeSection name="Projects">
+      <ResumeSectionContent
+        title={"FellowshipIt"}
+        skills={["Python", "SQLAlchemy", "PostgreSQL", "React Native"]}
+      >
+        <div>
+          <div>
+            Download The App! <Anchor>IOS</Anchor> | <Anchor>Android</Anchor>
+          </div>
+          <ul>
+            <li>
+              Built a mobile application that allows Christian communities to
+              stay better connected.
+            </li>
+          </ul>
+        </div>
+      </ResumeSectionContent>
       <ResumeSectionContent
         title={"Personal Website"}
         skills={["Next.js", "Javascript", "Vercel"]}
