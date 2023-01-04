@@ -1,4 +1,4 @@
-import { Sun, Moon, Grid, Home } from "react-feather";
+import { Sun, Moon, Grid, Home, Book, Code } from "react-feather";
 import styles from "./LightDarkToggle.module.css";
 import Switch from "./Switch";
 import { useState } from "react";
@@ -23,9 +23,9 @@ const LightDarkToggle = () => {
   const router = useRouter();
   const isAppPage = router.pathname.toLowerCase() === "/apps";
 
-  const buttonLink =  isAppPage ? "/" : "/apps"
-  const buttonText =  isAppPage ? "Home" : "Applications"
-  const buttonIcon = isAppPage ? <Home /> : <Grid />
+  const buttonLink = isAppPage ? "/" : "/apps";
+  const buttonText = isAppPage ? "Home" : "Applications";
+  const buttonIcon = isAppPage ? <Home /> : <Grid />;
 
   return (
     <div className={styles.container}>
@@ -33,6 +33,18 @@ const LightDarkToggle = () => {
         <div className={styles.appIconContainer}>
           {buttonIcon}
           <span className={styles.appText}>{buttonText}</span>
+        </div>
+      </Link>
+      <Link href={buttonLink} passHref>
+        <div className={styles.appIcon1Container}>
+          <Book />
+          <span className={styles.appText}>Personal Blog</span>
+        </div>
+      </Link>
+      <Link href={buttonLink} passHref>
+        <div className={styles.appIcon2Container}>
+          <Code />
+          <span className={styles.appText}>Tech Blog</span>
         </div>
       </Link>
       <Sun className={styles.icon} />
