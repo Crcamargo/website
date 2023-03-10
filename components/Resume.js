@@ -1,6 +1,9 @@
 import ResumeSection from "../components/ResumeSection";
 import ResumeSectionContent from "../components/ResumeSectionContent";
 import UCSD from "../public/ucsd.png";
+import Seismic from "../public/seismic.png";
+import Wise from "../public/wise.jpeg";
+import BrightSign from "../public/brightsign.png";
 import styles from "./Resume.module.css";
 import Anchor from "./Anchor";
 
@@ -16,9 +19,15 @@ const Resume = () => (
     </ResumeSection>
     <ResumeSection name="Experience">
       <ResumeSectionContent
+        title="Senior Machine Learning Platform Engineer - Wise"
+        date="January 2023 - Present"
+        img={Wise}
+      ></ResumeSectionContent>
+      <ResumeSectionContent
         title="Software Engineer - Seismic"
         date="September 2018 - September 2022"
         includeLeftIndent={true}
+        img={Seismic}
         skills={[
           ".NET",
           "Python",
@@ -88,6 +97,7 @@ const Resume = () => (
       <ResumeSectionContent
         title="Devops Engineer Intern - Seismic"
         date="June 2018 - September 2018"
+        img={Seismic}
         skills={[
           "React",
           "Node.js",
@@ -114,6 +124,7 @@ const Resume = () => (
       <ResumeSectionContent
         title="QA Engineer Intern - BrightSign"
         date="June 2017 - September 2017"
+        img={BrightSign}
         skills={["C++", "QA"]}
       >
         <ul>
@@ -129,6 +140,22 @@ const Resume = () => (
       </ResumeSectionContent>
     </ResumeSection>
     <ResumeSection name="Projects">
+      <ResumeSectionContent
+        title={"FellowshipIt"}
+        skills={["Python", "SQLAlchemy", "PostgreSQL", "React Native"]}
+      >
+        <div>
+          <div>
+            Download The App! <Anchor>IOS</Anchor> | <Anchor>Android</Anchor>
+          </div>
+          <ul>
+            <li>
+              Built a mobile application that allows Christian communities to
+              stay better connected.
+            </li>
+          </ul>
+        </div>
+      </ResumeSectionContent>
       <ResumeSectionContent
         title={"Personal Website"}
         skills={["Next.js", "Javascript", "Vercel"]}

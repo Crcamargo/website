@@ -21,10 +21,10 @@ const Hello = () => (
           width={IMAGE_SIZE}
         />
         <div className={styles.description}>
-          I am a software engineer specializing in building back-end,
-          multi-cloud, microservices. Currently, I work on building large,
-          complex, applications that serve thousands of enterprise customers.
-          🧑🏽‍💻
+          I am a Machine Learning Engineer, focused on building a cost-efficient
+          and scalable ML Platform. I collaborate with Data Scientists and
+          Analysts across all domains to impact decision-making and predictions
+          on billions of events 🧑🏽‍💻.
         </div>
       </div>
       <Contacts />
