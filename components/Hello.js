@@ -21,8 +21,10 @@ const Hello = () => (
           width={IMAGE_SIZE}
         />
         <div className={styles.description}>
-          I am a ML Engineer focusing on deploying and maintaining machine
-          learning models in production that serve millions of users 🧑🏽‍💻.
+          I am a Machine Learning Engineer, focused on building a cost-efficient
+          and scalable ML Platform. I collaborate with Data Scientists and
+          Analysts across all domains to impact decision-making and predictions
+          on billions of events 🧑🏽‍💻.
         </div>
       </div>
       <Contacts />
