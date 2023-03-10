@@ -10,7 +10,6 @@ const ResumeSectionContent = ({
   children,
   skills,
   imgWidth,
-  includeLeftIndent,
 }) => (
   <div className={styles.content}>
     <div className={styles.header}>
@@ -38,7 +37,7 @@ const ResumeSectionContent = ({
         <div className={styles.date}>{date}</div>
       </div>
     </div>
-    <div className={includeLeftIndent ? styles.detailsXl : styles.details}>
+    <div className={img ? styles.details : null}>
       {children}
       {skills ? (
         <div className={styles.skills}>
